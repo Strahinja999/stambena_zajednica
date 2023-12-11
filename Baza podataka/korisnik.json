@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "65774338052be89ef77d5c94"
+  },
+  "brojStana": 8,
+  "id": 1,
+  "ime": "Milos",
+  "korisnickoIme": "milos123",
+  "lozinka": "milos123",
+  "prezime": "Milosevic",
+  "tip": 1
+},{
+  "_id": {
+    "$oid": "657743b9052be89ef77d5c96"
+  },
+  "brojStana": 7,
+  "id": 2,
+  "ime": "Nebojsa",
+  "korisnickoIme": "nebojsa123",
+  "lozinka": "nebojsa123",
+  "prezime": "Vasojevic",
+  "tip": 0
+}]

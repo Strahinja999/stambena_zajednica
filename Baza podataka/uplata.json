@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "657744df052be89ef77d5c9b"
+  },
+  "id": 1,
+  "iznos": 1500,
+  "datum": "",
+  "korisnik": "milos123",
+  "tip": 0,
+  "trenutnoStanje": 0,
+  "mesec": 1
+},{
+  "_id": {
+    "$oid": "6577452c052be89ef77d5c9c"
+  },
+  "id": 2,
+  "iznos": 1500,
+  "datum": "",
+  "korisnik": "nebojsa123",
+  "tip": 1,
+  "trenutnoStanje": 0,
+  "mesec": 1
+}]

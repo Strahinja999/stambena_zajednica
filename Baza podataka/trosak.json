@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "65774406052be89ef77d5c98"
+  },
+  "id": 1,
+  "iznos": 2000,
+  "datum": {
+    "$date": {
+      "$numberLong": "1697061600000"
+    }
+  },
+  "opis": "Trosak popravke"
+},{
+  "_id": {
+    "$oid": "65774452052be89ef77d5c99"
+  },
+  "id": 2,
+  "iznos": 3000,
+  "datum": {
+    "$date": {
+      "$numberLong": "1702335600000"
+    }
+  },
+  "opis": "Trosak ciscenja"
+}]
