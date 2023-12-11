@@ -1,0 +1,10 @@
+.toolbar{
+    background-color:#009688;
+    color: #E0F2F1;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+}
+body{
+    overflow:hidden;
+}

@@ -1,0 +1,31 @@
+.table {
+    width: 100%;
+  }
+
+  .zelena{
+    background-color: #009688;
+  }
+
+  .oblo td{
+    border-radius: 3cm;
+  }
+  .crvena{
+    background-color: #B31312;
+  }
+
+  .siva{
+    background-color: #F1EFEF;
+  }
+
+  .nav-link{
+    color: #004D40 !important;
+    font-size: large;
+  }
+
+.trosak{
+    background-color: #4DB6AC !important;
+}
+h4{
+  color: #004D40;
+}
+

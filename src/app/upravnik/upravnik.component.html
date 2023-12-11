@@ -1,0 +1,203 @@
+
+<div class="container">
+    <div class="row">
+      <mat-tab-group>
+        <mat-tab label="Početna">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>JANUAR</td>
+                <td>FEBRUAR</td>
+                <td>MART</td>
+                <td>APRIL</td>
+                <td>MAJ</td>
+                <td>JUN</td>
+                <td>JUL</td>
+                <td>AVGUST</td>
+                <td>SEPTEMBAR</td>
+                <td>OKTOBAR</td>
+                <td>NOVEMBAR</td>
+                <td>DECEMBAR</td>
+              </tr>
+              <tr class="oblo">
+                <td class="zelena">Placeno</td>
+                <td class="zelena">Placeno</td>
+                <td class="zelena">Placeno</td>
+                <td class="zelena">Placeno</td>
+                <td class="crvena">&nbsp;</td>
+                <td class="siva">&nbsp;</td>
+                <td class="siva">&nbsp;</td>
+                <td class="siva">&nbsp;</td>
+                <td class="siva">&nbsp;</td>
+                <td class="siva">&nbsp;</td>
+                <td class="siva">&nbsp;</td>
+                <td class="siva">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-tab>
+        <mat-tab label="Uplate">
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+              <br>
+              <h4>Evidencija uplate</h4>
+            <form>
+                <mat-form-field color="primary" class="example-full-width">
+                    <mat-label>Iznos uplate</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Datum uplate</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/GGGG</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <br>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Mesec</mat-label>
+                    <mat-select>
+                        <mat-option value="1">Januar</mat-option>
+                        <mat-option value="2">Februar</mat-option>
+                        <mat-option value="3">Mart</mat-option>
+                        <mat-option value="4">April</mat-option>
+                        <mat-option value="5">Maj</mat-option>
+                        <mat-option value="6">Jun</mat-option>
+                        <mat-option value="7">Jul</mat-option>
+                        <mat-option value="8">Avgust</mat-option>
+                        <mat-option value="9">Septembar</mat-option>
+                        <mat-option value="10">Oktobar</mat-option>
+                        <mat-option value="11">Novembar</mat-option>
+                        <mat-option value="12">Decembar</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Stanar</mat-label>
+                    <mat-select>
+                        <mat-option value="1">Milos Milosevic</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <section>
+                    <mat-label>Način plaćanja: </mat-label>
+                    <mat-radio-group>
+                        <mat-radio-button color="primary" value="0" id="placanje">Keš</mat-radio-button>
+                        <mat-radio-button color="primary" value="1" id="placanje">Uplata na racun</mat-radio-button>
+    
+                    </mat-radio-group>
+                </section>
+                <mat-divider></mat-divider>
+                <br>
+                <div class="centar">
+                    <button mat-raised-button color="primary" class="dugme">Dodaj upatu</button>
+                </div>
+                <br>
+            </form>
+            </div>
+            <div class="col-sm-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+              <h4>Sve uplate</h4>
+                <table class="table table-striped">
+                    <tbody>
+                      <tr class="trosak">
+                        <th scope="col">Broj</th>
+                        <th scope="col">Datum</th>
+                        <th scope="col">Stanar</th>
+                        <th scope="col">Način plaćanja</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>10.12.2023</td>
+                        <td>Milos Milosevic</td>
+                        <td>Kes</td>
+                      </tr>
+                    </tbody>
+                    
+                  </table>
+                  
+            </div>
+            <div class="col-sm-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+              <h1>DODATI SVA DUGOVANJA/PLACANJA ZA SVAKOG STANARA</h1>
+            </div>
+            <div class="col-sm-3"></div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Troškovi">
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+              <br>
+              <h4>Evidencija troška</h4>
+              <form>
+                  <mat-form-field class="example-full-width" color="primary">
+                      <mat-label>Iznos troška</mat-label>
+                      <input matInput>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                      <mat-label>Datum troška</mat-label>
+                      <input matInput [matDatepicker]="picker">
+                      <mat-hint>MM/DD/GGGG</mat-hint>
+                      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  <br>
+                  <br>
+                  <mat-form-field class="example-full-width" color="primary">
+                      <mat-label>Opis troška</mat-label>
+                      <textarea matInput placeholder="Unesite kratak opis troška"></textarea>
+                  </mat-form-field>
+                  <br>
+                  <mat-divider></mat-divider>
+                  <br>
+                  <div class="centar">
+                      <button mat-raised-button color="primary" class="dugme">Dodaj trošak</button>
+                  </div>
+                  <br>
+              </form>
+            </div>
+            <div class="col-sm-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+              <h3>Svi troškovi</h3>
+              <table class="table table-striped">
+                  <tbody>
+                    <tr class="trosak">
+                      <th scope="col">Broj</th>
+                      <th scope="col">Datum</th>
+                      <th scope="col">Iznos</th>
+                      <th scope="col">Opis</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>10.12.2023</td>
+                      <td>2000</td>
+                      <td>Trosak popravke...</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3"></div>
+          </div>
+            
+        </mat-tab>
+        <mat-tab label="Profil">
+          <app-promena-lozinke></app-promena-lozinke>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+</div>
+    

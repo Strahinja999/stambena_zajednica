@@ -1,0 +1,61 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+  
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
+.prijava{
+  display: flex;
+  justify-content: center;
+}
+
+.dugme{
+  text-align: center;
+  color: white !important;
+  font-size: large;
+}
+.centar{
+  display: flex;
+  justify-content: center;
+}
+.prijava h1{
+  color: #009688;
+}
+.nav-link{
+  color: #004D40 !important;
+  font-size: large;
+}
+.nav-item{
+  height: 100%;
+  text-align: center;
+}
+
+.zelena{
+  background-color: #009688;
+}
+
+.oblo td{
+  border-radius: 3cm;
+}
+.crvena{
+  background-color: #B31312;
+}
+
+.siva{
+  background-color: #F1EFEF;
+}
+h4{
+  color: #004D40;
+}
+.mat-mdc-tab-body-content {
+  height: 100%;
+  overflow: hidden !important;
+}

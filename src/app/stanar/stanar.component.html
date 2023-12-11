@@ -1,0 +1,82 @@
+<br>
+<div class="container">
+  <div class="row">
+    <mat-tab-group>
+      <mat-tab label="Početna"> 
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>JANUAR</td>
+              <td>FEBRUAR</td>
+              <td>MART</td>
+              <td>APRIL</td>
+              <td>MAJ</td>
+              <td>JUN</td>
+              <td>JUL</td>
+              <td>AVGUST</td>
+              <td>SEPTEMBAR</td>
+              <td>OKTOBAR</td>
+              <td>NOVEMBAR</td>
+              <td>DECEMBAR</td>
+            </tr>
+            <tr class="oblo">
+              <td class="zelena">Placeno</td>
+              <td class="zelena">Placeno</td>
+              <td class="zelena">Placeno</td>
+              <td class="zelena">Placeno</td>
+              <td class="crvena">&nbsp;</td>
+              <td class="siva">&nbsp;</td>
+              <td class="siva">&nbsp;</td>
+              <td class="siva">&nbsp;</td>
+              <td class="siva">&nbsp;</td>
+              <td class="siva">&nbsp;</td>
+              <td class="siva">&nbsp;</td>
+              <td class="siva">&nbsp;</td>
+            </tr>
+          </tbody>
+          
+        </table>
+      </mat-tab>
+      <mat-tab label="Pregled troškova">
+        <div class="tabela">
+          <h4>Troškovi</h4>
+          <table class="table table-striped">
+            <tbody>
+              <tr class="trosak">
+                <th scope="col">Broj</th>
+                <th scope="col">Datum</th>
+                <th scope="col">Iznos</th>
+                <th scope="col">Opis</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>10.12.2023</td>
+                <td>2000</td>
+                <td>Trosak popravke...</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>10.12.2023</td>
+                <td>2000</td>
+                <td>Trosak popravke...</td>
+              </tr>
+            </tbody>
+            
+          </table>
+        </div>
+        
+      </mat-tab>
+      <mat-tab label="Profil">
+        <app-promena-lozinke></app-promena-lozinke>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+ 
+  <div class="row" *ngIf="trenutniKontekst == 'promenaLozinke'">
+    <app-promena-lozinke></app-promena-lozinke>
+  </div>
+</div>
+
+    
+
+    
