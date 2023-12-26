@@ -3,6 +3,9 @@
     <div class="row">
       <mat-tab-group>
         <mat-tab label="Početna">
+          <br>
+          <h3>Sve uplate: {{upravnik.ime}} {{upravnik.prezime}}</h3>
+          <br>
           <table class="table">
             <tbody>
               <tr>
@@ -19,19 +22,68 @@
                 <td>NOVEMBAR</td>
                 <td>DECEMBAR</td>
               </tr>
-              <tr class="oblo">
-                <td class="zelena">Placeno</td>
-                <td class="zelena">Placeno</td>
-                <td class="zelena">Placeno</td>
-                <td class="zelena">Placeno</td>
-                <td class="crvena">&nbsp;</td>
-                <td class="siva">&nbsp;</td>
-                <td class="siva">&nbsp;</td>
-                <td class="siva">&nbsp;</td>
-                <td class="siva">&nbsp;</td>
-                <td class="siva">&nbsp;</td>
-                <td class="siva">&nbsp;</td>
-                <td class="siva">&nbsp;</td>
+              <tr>
+                <td>
+                  <div *ngIf="uplateStana[0] != undefined && uplateStana[0].mesec == 1; then thenBlock1 else elseBlock1">
+                  </div>
+                  <ng-template #thenBlock1 ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock1 ><img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                </td>
+                <td>
+                  <div *ngIf="uplateStana[1] != undefined && uplateStana[1].mesec == 2; then thenBlock2 else elseBlock2"></div>
+                  <ng-template #thenBlock2><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock2><img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                </td>
+                <td>
+                  <div *ngIf="uplateStana[2] != undefined && uplateStana[2].mesec == 3; then thenBlock3 else elseBlock3"></div>
+                  <ng-template #thenBlock3  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock3  > <img src="../../assets/error-svgrepo-com.svg" alt=""> </ng-template>
+                </td>
+                <td>
+                  <div *ngIf="uplateStana[3] != undefined && uplateStana[3].mesec == 4; then thenBlock4 else elseBlock4"></div>
+                  <ng-template #thenBlock4  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock4  > <img src="../../assets/error-svgrepo-com.svg" alt=""> </ng-template>
+                </td>
+                <td>
+                  <div *ngIf="uplateStana[4] != undefined && uplateStana[4].mesec == 5 ; then thenBlock5 else elseBlock5"></div>
+                  <ng-template #thenBlock5 ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock5  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                </td>
+                <td  >
+                  <div *ngIf="uplateStana[5] != undefined && uplateStana[5].mesec == 6; then thenBlock6 else elseBlock6"></div>
+                  <ng-template #thenBlock6  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock6  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                </td>
+                <td  >
+                  <div *ngIf="uplateStana[6] != undefined && uplateStana[6].mesec == 7; then thenBlock7 else elseBlock7"></div>
+                  <ng-template #thenBlock7  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock7  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                </td>
+                <td >
+                  <div *ngIf="uplateStana[7] != undefined && uplateStana[7].mesec == 8; then thenBlock8 else elseBlock8"></div>
+                  <ng-template #thenBlock8  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock8  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                </td>
+                <td >
+                  <div *ngIf="uplateStana[8] != undefined && uplateStana[8].mesec == 9; then thenBlock9 else elseBlock9"></div>
+                  <ng-template #thenBlock9  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock9  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                </td>
+                <td >
+                  <div *ngIf="uplateStana[9] != undefined && uplateStana[9].mesec == 10; then thenBlock10 else elseBlock10"></div>
+                  <ng-template #thenBlock10  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock10  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                </td>
+                <td >
+                  <div *ngIf="uplateStana[10] != undefined && uplateStana[10].mesec == 11; then thenBlock11 else elseBlock11"></div>
+                  <ng-template #thenBlock11  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock11  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                </td>
+                <td >
+                  <div *ngIf="uplateStana[11] != undefined && uplateStana[11].mesec == 12; then thenBlock12 else elseBlock12"></div>
+                  <ng-template #thenBlock12  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                  <ng-template #elseBlock12  ><img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -45,12 +97,12 @@
             <form>
                 <mat-form-field color="primary" class="example-full-width">
                     <mat-label>Iznos uplate</mat-label>
-                    <input matInput>
+                    <input matInput type="number" [(ngModel)] = "iznosU" name="iznosU">
                 </mat-form-field>
                 <br>
                 <mat-form-field class="example-full-width">
                     <mat-label>Datum uplate</mat-label>
-                    <input matInput [matDatepicker]="picker">
+                    <input matInput [matDatepicker]="picker" [(ngModel)] = "datumU" name="datumU" >
                     <mat-hint>MM/DD/GGGG</mat-hint>
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
@@ -59,7 +111,7 @@
                 <br>
                 <mat-form-field class="example-full-width">
                     <mat-label>Mesec</mat-label>
-                    <mat-select>
+                    <mat-select [(ngModel)] = "mesecU" name="mesecU">
                         <mat-option value="1">Januar</mat-option>
                         <mat-option value="2">Februar</mat-option>
                         <mat-option value="3">Mart</mat-option>
@@ -76,24 +128,31 @@
                 </mat-form-field>
                 <br>
                 <mat-form-field class="example-full-width">
-                    <mat-label>Stanar</mat-label>
-                    <mat-select>
-                        <mat-option value="1">Milos Milosevic</mat-option>
+                    <mat-label>Stan</mat-label>
+                    <mat-select [(ngModel)] = "stanU" name="stanU" >
+                        <mat-option value="1">1</mat-option>
+                        <mat-option value="2">2</mat-option>
+                        <mat-option value="3">3</mat-option>
+                        <mat-option value="4">4</mat-option>
+                        <mat-option value="5">5</mat-option>
+                        <mat-option value="6">6</mat-option>
+                        <mat-option value="7">7</mat-option>
+                        <mat-option value="8">8</mat-option>
                     </mat-select>
                 </mat-form-field>
                 <br>
                 <section>
                     <mat-label>Način plaćanja: </mat-label>
-                    <mat-radio-group>
+                    <mat-radio-group [(ngModel)] = "placanjeU" name="placanjeU">
                         <mat-radio-button color="primary" value="0" id="placanje">Keš</mat-radio-button>
                         <mat-radio-button color="primary" value="1" id="placanje">Uplata na racun</mat-radio-button>
-    
                     </mat-radio-group>
                 </section>
+                <span style="color: red;">{{greska}}</span>
                 <mat-divider></mat-divider>
                 <br>
                 <div class="centar">
-                    <button mat-raised-button color="primary" class="dugme">Dodaj upatu</button>
+                    <button mat-raised-button color="primary" class="dugme" (click)="dodajUplatu()">Dodaj upatu</button>
                 </div>
                 <br>
             </form>
@@ -108,15 +167,27 @@
                     <tbody>
                       <tr class="trosak">
                         <th scope="col">Broj</th>
+                        <th scope="col">Iznos</th>
+                        <th scope="col">Mesec</th>
                         <th scope="col">Datum</th>
-                        <th scope="col">Stanar</th>
+                        <th scope="col">Broj stana</th>
                         <th scope="col">Način plaćanja</th>
+                        <th scope="col">OBRIŠI</th>
                       </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>10.12.2023</td>
-                        <td>Milos Milosevic</td>
-                        <td>Kes</td>
+                      <tr *ngFor="let u of uplate">
+                        <td>{{u.id}}</td>
+                        <td>{{u.iznos}} din.</td>
+                        <td>{{meseci[u.mesec-1]}}</td>
+                        <td>{{u.datum | date}}</td>
+                        <td>{{u.brojStana}}</td>
+                        <td>
+                          <div *ngIf="u.tip == 0; then thenBlock else elseBlock"></div>
+                            <ng-template #thenBlock>Keš</ng-template>
+                            <ng-template #elseBlock>Uplata na račun</ng-template>
+                        </td>
+                        <td>
+                          <img src="../../assets/delete-svgrepo-com.svg" class="obrisi" (click)="obrisiU(u.id)">
+                        </td>
                       </tr>
                     </tbody>
                     
@@ -126,11 +197,123 @@
             <div class="col-sm-3"></div>
           </div>
           <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6">
-              <h1>DODATI SVA DUGOVANJA/PLACANJA ZA SVAKOG STANARA</h1>
+            <div class="col-sm-2">
+              <h3>Uplate po stanovima</h3>
+              <table class="table table-striped">
+                <tbody class="zelena">
+                  <tr>
+                    <td>
+                      <button type="button" class="btn btn-success" (click)="uplateStanara(1)">Stan 1</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><button type="button" class="btn btn-success" (click)="uplateStanara(2)">Stan 2</button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button" class="btn btn-success" (click)="uplateStanara(3)">Stan 3</button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button" class="btn btn-success" (click)="uplateStanara(4)">Stan 4</button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button" class="btn btn-success" (click)="uplateStanara(5)">Stan 5</button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button" class="btn btn-success" (click)="uplateStanara(6)">Stan 6</button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button" class="btn btn-success" (click)="uplateStanara(7)">Stan 7</button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button" class="btn btn-success" (click)="uplateStanara(8)">Stan 8</button></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="col-sm-3"></div>
+            <div class="col-sm-10">
+              <h1>{{stan}}</h1>
+              <table class="table" *ngIf="stan != ''">
+                <tbody>
+                  <tr>
+                    <td>JANUAR</td>
+                    <td>FEBRUAR</td>
+                    <td>MART</td>
+                    <td>APRIL</td>
+                    <td>MAJ</td>
+                    <td>JUN</td>
+                    <td>JUL</td>
+                    <td>AVGUST</td>
+                    <td>SEPTEMBAR</td>
+                    <td>OKTOBAR</td>
+                    <td>NOVEMBAR</td>
+                    <td>DECEMBAR</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div *ngIf="uplateStana1[0] != undefined && uplateStana1[0].mesec == 1; then thenBlock01 else elseBlock01">
+                      </div>
+                      <ng-template #thenBlock01 ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock01 ><img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                    </td>
+                    <td>
+                      <div *ngIf="uplateStana1[1] != undefined && uplateStana1[1].mesec == 2; then thenBlock02 else elseBlock02"></div>
+                      <ng-template #thenBlock02><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock02><img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                    </td>
+                    <td>
+                      <div *ngIf="uplateStana1[2] != undefined && uplateStana1[2].mesec == 3; then thenBlock03 else elseBlock03"></div>
+                      <ng-template #thenBlock03  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock03  > <img src="../../assets/error-svgrepo-com.svg" alt=""> </ng-template>
+                    </td>
+                    <td>
+                      <div *ngIf="uplateStana1[3] != undefined && uplateStana1[3].mesec == 4; then thenBlock04 else elseBlock04"></div>
+                      <ng-template #thenBlock04  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock04  > <img src="../../assets/error-svgrepo-com.svg" alt=""> </ng-template>
+                    </td>
+                    <td>
+                      <div *ngIf="uplateStana1[4] != undefined && uplateStana1[4].mesec == 5 ; then thenBlock05 else elseBlock05"></div>
+                      <ng-template #thenBlock05 ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock05  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                    </td>
+                    <td  >
+                      <div *ngIf="uplateStana1[5] != undefined && uplateStana1[5].mesec == 6; then thenBlock06 else elseBlock06"></div>
+                      <ng-template #thenBlock06  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock06  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                    </td>
+                    <td  >
+                      <div *ngIf="uplateStana1[6] != undefined && uplateStana1[6].mesec == 7; then thenBlock07 else elseBlock07"></div>
+                      <ng-template #thenBlock07  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock07  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                    </td>
+                    <td >
+                      <div *ngIf="uplateStana1[7] != undefined && uplateStana1[7].mesec == 8; then thenBlock8 else elseBlock08"></div>
+                      <ng-template #thenBlock08  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock08  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                    </td>
+                    <td >
+                      <div *ngIf="uplateStana1[8] != undefined && uplateStana1[8].mesec == 9; then thenBlock09 else elseBlock09"></div>
+                      <ng-template #thenBlock09  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock09  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                    </td>
+                    <td >
+                      <div *ngIf="uplateStana1[9] != undefined && uplateStana1[9].mesec == 10; then thenBlock010 else elseBlock010"></div>
+                      <ng-template #thenBlock010  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock010  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                    </td>
+                    <td >
+                      <div *ngIf="uplateStana1[10] != undefined && uplateStana1[10].mesec == 11; then thenBlock011 else elseBlock011"></div>
+                      <ng-template #thenBlock011  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock011  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                    </td>
+                    <td >
+                      <div *ngIf="uplateStana1[11] != undefined && uplateStana1[11].mesec == 12; then thenBlock012 else elseBlock012"></div>
+                      <ng-template #thenBlock012  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                      <ng-template #elseBlock012  ><img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </mat-tab>
         <mat-tab label="Troškovi">
@@ -142,12 +325,12 @@
               <form>
                   <mat-form-field class="example-full-width" color="primary">
                       <mat-label>Iznos troška</mat-label>
-                      <input matInput>
+                      <input matInput type="number" [(ngModel)] = "iznosT" name="iznosT">
                   </mat-form-field>
                   <br>
                   <mat-form-field class="example-full-width">
                       <mat-label>Datum troška</mat-label>
-                      <input matInput [matDatepicker]="picker">
+                      <input matInput [matDatepicker]="picker" [(ngModel)] = "datumT" name="datumT">
                       <mat-hint>MM/DD/GGGG</mat-hint>
                       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                       <mat-datepicker #picker></mat-datepicker>
@@ -156,13 +339,14 @@
                   <br>
                   <mat-form-field class="example-full-width" color="primary">
                       <mat-label>Opis troška</mat-label>
-                      <textarea matInput placeholder="Unesite kratak opis troška"></textarea>
+                      <textarea matInput placeholder="Unesite kratak opis troška" [(ngModel)] = "opisT" name="opisT"></textarea>
                   </mat-form-field>
+                  <span style="color: red;">{{greska1}}</span>
                   <br>
                   <mat-divider></mat-divider>
                   <br>
                   <div class="centar">
-                      <button mat-raised-button color="primary" class="dugme">Dodaj trošak</button>
+                      <button mat-raised-button color="primary" class="dugme" (click)="dodajTrosak()">Dodaj trošak</button>
                   </div>
                   <br>
               </form>
@@ -180,12 +364,16 @@
                       <th scope="col">Datum</th>
                       <th scope="col">Iznos</th>
                       <th scope="col">Opis</th>
+                      <th scope="col">OBRIŠI</th>
                     </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>10.12.2023</td>
-                      <td>2000</td>
-                      <td>Trosak popravke...</td>
+                    <tr *ngFor="let t of troskovi">
+                      <td>{{t.id}}</td>
+                      <td>{{t.datum | date}}</td>
+                      <td>{{t.iznos}}</td>
+                      <td>{{t.opis}}</td>
+                      <td>
+                        <img src="../../assets/delete-svgrepo-com.svg" class="obrisi" (click)="obrisiT(t.id)">
+                      </td>
                     </tr>
                   </tbody>
                 </table>

@@ -38,24 +38,41 @@ td {
   text-align: center;
 }
 
-.zelena{
-  background-color: #009688;
-}
 
-.oblo td{
-  border-radius: 3cm;
-}
+
 .crvena{
   background-color: #B31312;
+  border-radius: 3cm;
 }
 
-.siva{
-  background-color: #F1EFEF;
-}
 h4{
   color: #004D40;
+}
+
+h3{
+  color: #004D40;
+}
+.zelena tr td{
+  color: #004D40;
+}
+.btn-success{
+  background-color: #004D40 !important;
+
 }
 .mat-mdc-tab-body-content {
   height: 100%;
   overflow: hidden !important;
+}
+
+.obrisi{
+  height: 30px;
+  
+}
+
+td{
+  text-align: center;
+}
+
+th{
+  text-align: center;
 }

@@ -19,19 +19,68 @@
               <td>NOVEMBAR</td>
               <td>DECEMBAR</td>
             </tr>
-            <tr class="oblo">
-              <td class="zelena">Placeno</td>
-              <td class="zelena">Placeno</td>
-              <td class="zelena">Placeno</td>
-              <td class="zelena">Placeno</td>
-              <td class="crvena">&nbsp;</td>
-              <td class="siva">&nbsp;</td>
-              <td class="siva">&nbsp;</td>
-              <td class="siva">&nbsp;</td>
-              <td class="siva">&nbsp;</td>
-              <td class="siva">&nbsp;</td>
-              <td class="siva">&nbsp;</td>
-              <td class="siva">&nbsp;</td>
+            <tr>
+              <td>
+                <div *ngIf="uplateStana[0] != undefined && uplateStana[0].mesec == 1; then thenBlock1 else elseBlock1">
+                </div>
+                <ng-template #thenBlock1 ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock1 ><img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+              </td>
+              <td>
+                <div *ngIf="uplateStana[1] != undefined && uplateStana[1].mesec == 2; then thenBlock2 else elseBlock2"></div>
+                <ng-template #thenBlock2><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock2><img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+              </td>
+              <td>
+                <div *ngIf="uplateStana[2] != undefined && uplateStana[2].mesec == 3; then thenBlock3 else elseBlock3"></div>
+                <ng-template #thenBlock3  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock3  > <img src="../../assets/error-svgrepo-com.svg" alt=""> </ng-template>
+              </td>
+              <td>
+                <div *ngIf="uplateStana[3] != undefined && uplateStana[3].mesec == 4; then thenBlock4 else elseBlock4"></div>
+                <ng-template #thenBlock4  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock4  > <img src="../../assets/error-svgrepo-com.svg" alt=""> </ng-template>
+              </td>
+              <td>
+                <div *ngIf="uplateStana[4] != undefined && uplateStana[4].mesec == 5 ; then thenBlock5 else elseBlock5"></div>
+                <ng-template #thenBlock5 ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock5  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+              </td>
+              <td  >
+                <div *ngIf="uplateStana[5] != undefined && uplateStana[5].mesec == 6; then thenBlock6 else elseBlock6"></div>
+                <ng-template #thenBlock6  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock6  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+              </td>
+              <td  >
+                <div *ngIf="uplateStana[6] != undefined && uplateStana[6].mesec == 7; then thenBlock7 else elseBlock7"></div>
+                <ng-template #thenBlock7  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock7  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+              </td>
+              <td >
+                <div *ngIf="uplateStana[7] != undefined && uplateStana[7].mesec == 8; then thenBlock8 else elseBlock8"></div>
+                <ng-template #thenBlock8  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock8  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+              </td>
+              <td >
+                <div *ngIf="uplateStana[8] != undefined && uplateStana[8].mesec == 9; then thenBlock9 else elseBlock9"></div>
+                <ng-template #thenBlock9  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock9  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+              </td>
+              <td >
+                <div *ngIf="uplateStana[9] != undefined && uplateStana[9].mesec == 10; then thenBlock10 else elseBlock10"></div>
+                <ng-template #thenBlock10  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock10  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+              </td>
+              <td >
+                <div *ngIf="uplateStana[10] != undefined && uplateStana[10].mesec == 11; then thenBlock11 else elseBlock11"></div>
+                <ng-template #thenBlock11  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock11  > <img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+              </td>
+              <td >
+                <div *ngIf="uplateStana[11] != undefined && uplateStana[11].mesec == 12; then thenBlock12 else elseBlock12"></div>
+                <ng-template #thenBlock12  ><img src="../../assets/success-svgrepo-com.svg" alt=""></ng-template>
+                <ng-template #elseBlock12  ><img src="../../assets/error-svgrepo-com.svg" alt=""></ng-template>
+              </td>
             </tr>
           </tbody>
           
@@ -48,20 +97,13 @@
                 <th scope="col">Iznos</th>
                 <th scope="col">Opis</th>
               </tr>
-              <tr>
-                <td>1</td>
-                <td>10.12.2023</td>
-                <td>2000</td>
-                <td>Trosak popravke...</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>10.12.2023</td>
-                <td>2000</td>
-                <td>Trosak popravke...</td>
+              <tr *ngFor="let t of troskovi">
+                <td>{{t.id}}</td>
+                <td>{{t.datum | date}}</td>
+                <td>{{t.iznos}}</td>
+                <td>{{t.opis}}</td>
               </tr>
             </tbody>
-            
           </table>
         </div>
         

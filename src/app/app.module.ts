@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrijavaComponent } from './prijava/prijava.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { StanarComponent } from './stanar/stanar.component';
 import { PromenaLozinkeComponent } from './promena-lozinke/promena-lozinke.component';
 
@@ -59,7 +59,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatCheckboxModule,
     MatRadioModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
