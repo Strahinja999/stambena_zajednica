@@ -3,6 +3,9 @@
   <div class="row">
     <mat-tab-group>
       <mat-tab label="Početna"> 
+        <br>
+        <h3>Sve uplate: {{korisnik.ime}} {{korisnik.prezime}}</h3>
+        <br>
         <table class="table">
           <tbody>
             <tr>
@@ -85,6 +88,7 @@
           </tbody>
           
         </table>
+        <h4 class="fw-normal stanje">TRENUTNO STANJE: {{trenStanje}}</h4>
       </mat-tab>
       <mat-tab label="Pregled troškova">
         <div class="tabela">

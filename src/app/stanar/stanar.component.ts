@@ -50,6 +50,14 @@ export class StanarComponent {
       })
       this.trosakServis.dohvatiSveTroskove().subscribe((troskovi: Trosak[]) => {
         this.troskovi = troskovi;
+        for(let i = 0; i< troskovi.length; i++){
+          this.trenStanje -= troskovi[i].iznos
+        }
+      })
+      this.uplataServis.dohvatiSveUplate().subscribe((uplate: Uplata[]) => {
+        for(let i = 0; i < uplate.length; i++){
+          this.trenStanje += uplate[i].iznos
+        }
       })
       
     }
@@ -62,6 +70,8 @@ export class StanarComponent {
   troskovi: Trosak[] = new Array
 
   uplateStana:Uplata[] = new Array
+
+  trenStanje:number = 0
 
   promeniKontekst(kontekst:string){
     this.trenutniKontekst = kontekst;

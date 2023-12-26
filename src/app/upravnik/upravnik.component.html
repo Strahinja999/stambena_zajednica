@@ -87,6 +87,8 @@
               </tr>
             </tbody>
           </table>
+          <h4 class="fw-normal stanje">TRENUTNO STANJE: {{trenStanje}}</h4>
+        
         </mat-tab>
         <mat-tab label="Uplate">
           <div class="row">
@@ -231,7 +233,7 @@
               </table>
             </div>
             <div class="col-sm-10">
-              <h1>{{stan}}</h1>
+              <h2 style="color: #004D40;">{{stan}}</h2>
               <table class="table" *ngIf="stan != ''">
                 <tbody>
                   <tr>

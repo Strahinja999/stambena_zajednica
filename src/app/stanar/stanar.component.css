@@ -29,3 +29,12 @@ h4{
   color: #004D40;
 }
 
+.stanje{
+  text-align: end;
+  background-color: #009688;
+  color: whitesmoke;
+  border: 1px solid #009688;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: underline;
+}

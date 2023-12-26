@@ -21,7 +21,7 @@ interface Mesec {
 export class UpravnikComponent {
   constructor(private router: Router, private trosakServis: TrosakService, private uplataServis: UplataService, private korisnikServis: KorisnikService) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.trenutniKontekst = 'pocetna'
     if(localStorage.getItem('ulogovan') != 'milos123' || localStorage.getItem('ulogovan') == null){
       this.router.navigate([''])
@@ -34,8 +34,14 @@ export class UpravnikComponent {
       })
       this.trosakServis.dohvatiSveTroskove().subscribe((troskovi: Trosak[]) => {
         this.troskovi = troskovi;
+        for(let i =0; i< troskovi.length; i++){
+          this.trenStanje -= troskovi[i].iznos
+        }
       })
       this.uplataServis.dohvatiSveUplate().subscribe((uplate: Uplata[]) => {
+        for(let i = 0; i < uplate.length; i++){
+          this.trenStanje += uplate[i].iznos
+        }
         this.uplate = uplate;
       })
       this.uplataServis.dohvatiSveUplateStana(8).subscribe((u: Uplata[]) => {
@@ -88,6 +94,8 @@ export class UpravnikComponent {
   greska:string = ""
   greska1:string = ""
 
+  trenStanje:number = 0;
+
   promeniKontekst(kontekst:string){
     this.trenutniKontekst = kontekst;
   }
@@ -97,13 +105,25 @@ export class UpravnikComponent {
       this.greska = "Svi podaci moraju biti uneti!" 
     }else{
       this.greska = ""
-      this.uplataServis.dodajUplatu(this.uplate[this.uplate.length-1].id + 1, this.iznosU, this.datumU, this.mesecU, this.stanU, this.placanjeU).subscribe(m => {
-         if (m == null) { alert("Greska") }
-         else {
-           this.ngOnInit();
-           location.reload();
-         }
-       })
+      if(this.uplate.length == 0){
+        this.uplataServis.dodajUplatu(1, this.iznosU, this.datumU, this.mesecU, this.stanU, this.placanjeU).subscribe(m => {
+          if (m == null) { alert("Greska") }
+          else {
+            this.ngOnInit();
+            location.reload();
+          }
+        })
+
+      }else{
+        this.uplataServis.dodajUplatu(this.uplate[this.uplate.length-1].id + 1, this.iznosU, this.datumU, this.mesecU, this.stanU, this.placanjeU).subscribe(m => {
+           if (m == null) { alert("Greska") }
+           else {
+             this.ngOnInit();
+             location.reload();
+           }
+         })
+
+      }
     }
   }
 
@@ -112,13 +132,24 @@ export class UpravnikComponent {
       this.greska1 = "Svi podaci moraju biti uneti!" 
     }else{
       this.greska1 = ""
-      this.trosakServis.dodajTrosak(this.troskovi[this.troskovi.length-1].id+1, this.iznosT, this.datumT,this.opisT).subscribe(m => {
-        if (m == null) { alert("Greska") }
-        else {
-          this.ngOnInit();
-          location.reload();
-        }
-      })
+      if(this.troskovi.length == 0){
+        this.trosakServis.dodajTrosak(1, this.iznosT, this.datumT,this.opisT).subscribe(m => {
+          if (m == null) { alert("Greska") }
+          else {
+            this.ngOnInit();
+            location.reload();
+          }
+        })
+      }else{
+        this.trosakServis.dodajTrosak(this.troskovi[this.troskovi.length-1].id+1, this.iznosT, this.datumT,this.opisT).subscribe(m => {
+          if (m == null) { alert("Greska") }
+          else {
+            this.ngOnInit();
+            location.reload();
+          }
+        })
+
+      }
     }
   }  
 
